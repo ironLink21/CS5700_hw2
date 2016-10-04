@@ -5,7 +5,6 @@ using System.Text;
 
 namespace Common
 {
-
     public class TickerMessage
     {
         public string Symbol { get; set; }
