@@ -46,14 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AddPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddPanel.Designer.cs">
+      <DependentUpon>AddPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadBox.Designer.cs">
+      <DependentUpon>LoadBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainBox.Designer.cs">
+      <DependentUpon>MainBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddPanel.resx">
+      <DependentUpon>AddPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadBox.resx">
+      <DependentUpon>LoadBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainBox.resx">
+      <DependentUpon>MainBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
