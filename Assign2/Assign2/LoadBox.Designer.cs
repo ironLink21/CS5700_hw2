@@ -58,6 +58,7 @@
             // 
             // PortfolioListView
             // 
+            this.PortfolioListView.Alignment = System.Windows.Forms.ListViewAlignment.Default;
             this.PortfolioListView.CheckBoxes = true;
             this.PortfolioListView.Location = new System.Drawing.Point(161, 41);
             this.PortfolioListView.Name = "PortfolioListView";

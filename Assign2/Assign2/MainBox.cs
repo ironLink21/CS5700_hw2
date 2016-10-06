@@ -31,15 +31,11 @@ namespace Assign2
             OpenFileDialog fopen = new OpenFileDialog();
             if (fopen.ShowDialog() == DialogResult.OK)
             {
-                // grabs file
-                string fileName = fopen.FileName;
-
-                // pass to csv reader - need to write my own
                 symbList = new List<string>();
                 stockList = new List<Stock>();
 
                 CSVreader reader = new CSVreader();
-                stockList = reader.inputStream(fileName);
+                stockList = reader.inputStream(fopen.FileName);
 
                 foreach(Stock stock in stockList)
                 {
