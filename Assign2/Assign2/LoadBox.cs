@@ -26,27 +26,30 @@ namespace Assign2
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            if(PortfolioListView.Items.Count == 0)
-            {
-                ColumnHeader col = new ColumnHeader("Stock");
-                col.Width = 293;
-                PortfolioListView.Columns.Add(col);
-            }
-
             String symbol = StockListCombo.Text;
-            if (!PortfolioListView.Items.ContainsKey(symbol))
+            if (!PortfolioListBox.Items.Contains(symbol))
             {
-                PortfolioListView.Items.Add(symbol, symbol, 0);
+                PortfolioListBox.Items.Add(symbol);
             }
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)
         {
 
-            foreach (ListViewItem eachItem in PortfolioListView.CheckedItems)
+            foreach (var item in PortfolioListBox.CheckedItems.OfType<string>().ToList())
             {
-                PortfolioListView.Items.Remove(eachItem);
+                PortfolioListBox.Items.Remove(item);
             }
+        }
+
+        private void PortfolioListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,9 +30,9 @@
         {
             this.StockListCombo = new System.Windows.Forms.ComboBox();
             this.AddBtn = new System.Windows.Forms.Button();
-            this.PortfolioListView = new System.Windows.Forms.ListView();
             this.RemoveBtn = new System.Windows.Forms.Button();
             this.CreateBtn = new System.Windows.Forms.Button();
+            this.PortfolioListBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // StockListCombo
@@ -56,16 +56,6 @@
             this.AddBtn.UseVisualStyleBackColor = true;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // PortfolioListView
-            // 
-            this.PortfolioListView.Alignment = System.Windows.Forms.ListViewAlignment.Default;
-            this.PortfolioListView.CheckBoxes = true;
-            this.PortfolioListView.Location = new System.Drawing.Point(161, 41);
-            this.PortfolioListView.Name = "PortfolioListView";
-            this.PortfolioListView.Size = new System.Drawing.Size(293, 450);
-            this.PortfolioListView.TabIndex = 2;
-            this.PortfolioListView.UseCompatibleStateImageBehavior = false;
-            // 
             // RemoveBtn
             // 
             this.RemoveBtn.Location = new System.Drawing.Point(243, 13);
@@ -85,14 +75,23 @@
             this.CreateBtn.Text = "Create";
             this.CreateBtn.UseVisualStyleBackColor = true;
             // 
+            // PortfolioListBox
+            // 
+            this.PortfolioListBox.FormattingEnabled = true;
+            this.PortfolioListBox.Location = new System.Drawing.Point(161, 42);
+            this.PortfolioListBox.Name = "PortfolioListBox";
+            this.PortfolioListBox.Size = new System.Drawing.Size(245, 244);
+            this.PortfolioListBox.TabIndex = 5;
+            this.PortfolioListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
             // CreatePortfolioView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 503);
+            this.ClientSize = new System.Drawing.Size(418, 301);
+            this.Controls.Add(this.PortfolioListBox);
             this.Controls.Add(this.CreateBtn);
             this.Controls.Add(this.RemoveBtn);
-            this.Controls.Add(this.PortfolioListView);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.StockListCombo);
             this.Name = "CreatePortfolioView";
@@ -105,8 +104,8 @@
 
         private System.Windows.Forms.ComboBox StockListCombo;
         private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.ListView PortfolioListView;
         private System.Windows.Forms.Button RemoveBtn;
         private System.Windows.Forms.Button CreateBtn;
+        private System.Windows.Forms.CheckedListBox PortfolioListBox;
     }
 }
