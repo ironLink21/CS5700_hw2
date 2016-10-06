@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Common;
+
 namespace Assign2
 {
     public partial class MainBox : Form
     {
         List<String> symbList { get; set; }
+        List<Stock> stockList { get; set; }
         public CreatePortfolioView loadBox { get; set; }
 
 
@@ -24,7 +27,7 @@ namespace Assign2
         private void LoadBtn_Click(object sender, EventArgs e)
         {
 
-            // open openfiledialog 
+            // open openfiledialog
             OpenFileDialog fopen = new OpenFileDialog();
             if (fopen.ShowDialog() == DialogResult.OK)
             {
@@ -32,24 +35,24 @@ namespace Assign2
                 string fileName = fopen.FileName;
 
                 // pass to csv reader - need to write my own
-
-                // symbList = csv Reader output
                 symbList = new List<string>();
-                symbList.Add( "adc" );
-                symbList.Add("def");
-                symbList.Add("ghi");
-                symbList.Add("jkl");
+                stockList = new List<Stock>();
+
+                CSVreader reader = new CSVreader();
+                stockList = reader.inputStream(fileName);
+
+                foreach(Stock stock in stockList)
+                {
+                    symbList.Add(stock.symbol);
+                }
+
                 loadBox = new CreatePortfolioView(symbList);
                 loadBox.ShowDialog();
             }
-            
-
-
         }
 
         private void MainBox_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

@@ -8,7 +8,15 @@ namespace Common
 {
     public class Stock
     {
+        public string symbol { get; set; }
+        public string name { get; set; }
+
         // TODO: Design and implement the properties and behaviors of this class.
+        public Stock (string symbol1, string name1)
+        {
+            symbol = symbol1;
+            name = name1;
+        }
 
         public void Update(TickerMessage message)
         {

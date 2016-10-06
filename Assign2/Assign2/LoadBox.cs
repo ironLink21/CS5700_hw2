@@ -29,7 +29,6 @@ namespace Assign2
             if(PortfolioListView.Items.Count == 0)
             {
                 ColumnHeader col = new ColumnHeader("Stock");
-                col.Width = 293;
                 PortfolioListView.Columns.Add(col);
             }
 
@@ -37,6 +36,17 @@ namespace Assign2
             if (!PortfolioListView.Items.ContainsKey(symbol))
             {
                 PortfolioListView.Items.Add(symbol, symbol, 0);
+            }
+        }
+
+        private void RemoveBtn_Click(object sender, EventArgs e)
+        {
+            for (int i = PortfolioListView.Items.Count - 1; i >= 0; i--)
+            {
+                if (PortfolioListView.Items[i].Checked)
+                {
+                    PortfolioListView.Items[i].Remove();
+                }
             }
         }
     }

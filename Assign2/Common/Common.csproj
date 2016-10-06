@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSVreader.cs" />
     <Compile Include="TickerMessage.cs" />
     <Compile Include="StreamStocksMessage.cs" />
     <Compile Include="StockPortfolio.cs" />

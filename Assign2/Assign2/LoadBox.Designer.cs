@@ -33,7 +33,6 @@
             this.PortfolioListView = new System.Windows.Forms.ListView();
             this.RemoveBtn = new System.Windows.Forms.Button();
             this.CreateBtn = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // StockListCombo
@@ -60,8 +59,6 @@
             // PortfolioListView
             // 
             this.PortfolioListView.CheckBoxes = true;
-            this.PortfolioListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
             this.PortfolioListView.Location = new System.Drawing.Point(161, 41);
             this.PortfolioListView.Name = "PortfolioListView";
             this.PortfolioListView.Size = new System.Drawing.Size(293, 450);
@@ -76,6 +73,7 @@
             this.RemoveBtn.TabIndex = 3;
             this.RemoveBtn.Text = "Remove Chk.";
             this.RemoveBtn.UseVisualStyleBackColor = true;
+            this.RemoveBtn.Click += new System.EventHandler(this.RemoveBtn_Click);
             // 
             // CreateBtn
             // 
@@ -85,10 +83,6 @@
             this.CreateBtn.TabIndex = 4;
             this.CreateBtn.Text = "Create";
             this.CreateBtn.UseVisualStyleBackColor = true;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Width = 293;
             // 
             // CreatePortfolioView
             // 
@@ -113,6 +107,5 @@
         private System.Windows.Forms.ListView PortfolioListView;
         private System.Windows.Forms.Button RemoveBtn;
         private System.Windows.Forms.Button CreateBtn;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
