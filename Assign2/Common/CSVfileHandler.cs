@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    public class CSVreader
+    public class CSVfileHandler
     {
         public string Location { get; set; }
 
-        public CSVreader()
+        public CSVfileHandler()
         {
         }
 
@@ -25,7 +25,7 @@ namespace Common
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    var values = line.Split(new char[] { ',' }, 2);
+                    var values = line.Split(new char[] { ',' }, 2);  //TODO: need to have an if statement that looks to see if the file just has symbol,name or symbol, price,name
                     if (values[0].Length <= 6)
                     {
                         try

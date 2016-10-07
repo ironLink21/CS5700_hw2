@@ -14,10 +14,10 @@ namespace Assign2
 {
     public partial class MainBox : Form
     {
-        List<String> symbList { get; set; }
-        List<Stock> stockList { get; set; }
+        public List<Stock> stockList { get; set; }
+        public List<Stock> portfolio { get; set; }
         public CreatePortfolioView loadBox { get; set; }
-
+        public AddPanel addPanel { get; set; }
 
         public MainBox()
         {
@@ -26,29 +26,31 @@ namespace Assign2
 
         private void LoadBtn_Click(object sender, EventArgs e)
         {
-
             // open openfiledialog
             OpenFileDialog fopen = new OpenFileDialog();
             if (fopen.ShowDialog() == DialogResult.OK)
             {
-                symbList = new List<string>();
                 stockList = new List<Stock>();
+                portfolio = new List<Stock>();
 
-                CSVreader reader = new CSVreader();
+                CSVfileHandler reader = new CSVfileHandler();
                 stockList = reader.inputStream(fopen.FileName);
 
-                foreach(Stock stock in stockList)
-                {
-                    symbList.Add(stock.symbol);
-                }
-
-                loadBox = new CreatePortfolioView(symbList);
+                loadBox = new CreatePortfolioView(stockList, this);
                 loadBox.ShowDialog();
             }
+        }
+
+        private void AddPanelBtn_Click(object sender, EventArgs e)
+        {
+            addPanel = new AddPanel(portfolio);
+            addPanel.ShowDialog();
         }
 
         private void MainBox_Load(object sender, EventArgs e)
         {
         }
+
+        
     }
 }

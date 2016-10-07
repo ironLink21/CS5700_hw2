@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.LoadBtn = new System.Windows.Forms.Button();
-            this.SaveBtn = new System.Windows.Forms.Button();
-            this.AddPanelBtn = new System.Windows.Forms.Button();
             this.panel0 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.LoadBtn = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.AddPanelBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,34 +54,6 @@
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(620, 341);
             this.flowLayoutPanel.TabIndex = 0;
-            // 
-            // LoadBtn
-            // 
-            this.LoadBtn.Location = new System.Drawing.Point(12, 12);
-            this.LoadBtn.Name = "LoadBtn";
-            this.LoadBtn.Size = new System.Drawing.Size(92, 23);
-            this.LoadBtn.TabIndex = 1;
-            this.LoadBtn.Text = "Load Portfolio";
-            this.LoadBtn.UseVisualStyleBackColor = true;
-            this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Location = new System.Drawing.Point(110, 12);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(89, 23);
-            this.SaveBtn.TabIndex = 2;
-            this.SaveBtn.Text = "Save Portfolio";
-            this.SaveBtn.UseVisualStyleBackColor = true;
-            // 
-            // AddPanelBtn
-            // 
-            this.AddPanelBtn.Location = new System.Drawing.Point(205, 12);
-            this.AddPanelBtn.Name = "AddPanelBtn";
-            this.AddPanelBtn.Size = new System.Drawing.Size(75, 23);
-            this.AddPanelBtn.TabIndex = 3;
-            this.AddPanelBtn.Text = "Add Panel";
-            this.AddPanelBtn.UseVisualStyleBackColor = true;
             // 
             // panel0
             // 
@@ -124,6 +96,35 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 163);
             this.panel5.TabIndex = 2;
+            // 
+            // LoadBtn
+            // 
+            this.LoadBtn.Location = new System.Drawing.Point(12, 12);
+            this.LoadBtn.Name = "LoadBtn";
+            this.LoadBtn.Size = new System.Drawing.Size(92, 23);
+            this.LoadBtn.TabIndex = 1;
+            this.LoadBtn.Text = "Load Portfolio";
+            this.LoadBtn.UseVisualStyleBackColor = true;
+            this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Location = new System.Drawing.Point(110, 12);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(89, 23);
+            this.SaveBtn.TabIndex = 2;
+            this.SaveBtn.Text = "Save Portfolio";
+            this.SaveBtn.UseVisualStyleBackColor = true;
+            // 
+            // AddPanelBtn
+            // 
+            this.AddPanelBtn.Location = new System.Drawing.Point(205, 12);
+            this.AddPanelBtn.Name = "AddPanelBtn";
+            this.AddPanelBtn.Size = new System.Drawing.Size(75, 23);
+            this.AddPanelBtn.TabIndex = 3;
+            this.AddPanelBtn.Text = "Add Panel";
+            this.AddPanelBtn.UseVisualStyleBackColor = true;
+            this.AddPanelBtn.Click += new System.EventHandler(this.AddPanelBtn_Click);
             // 
             // MainBox
             // 

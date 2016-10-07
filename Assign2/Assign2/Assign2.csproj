@@ -95,9 +95,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{bf9b22e5-1567-4ba7-9b60-0a07af8b734b}</Project>
       <Name>Common</Name>

@@ -74,6 +74,7 @@
             this.CreateBtn.TabIndex = 4;
             this.CreateBtn.Text = "Create";
             this.CreateBtn.UseVisualStyleBackColor = true;
+            this.CreateBtn.Click += new System.EventHandler(this.CreateBtn_Click);
             // 
             // PortfolioListBox
             // 
@@ -82,7 +83,6 @@
             this.PortfolioListBox.Name = "PortfolioListBox";
             this.PortfolioListBox.Size = new System.Drawing.Size(245, 244);
             this.PortfolioListBox.TabIndex = 5;
-            this.PortfolioListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // CreatePortfolioView
             // 
