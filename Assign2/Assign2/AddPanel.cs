@@ -14,6 +14,7 @@ namespace Assign2
     public partial class AddPanel : Form
     {
         string currStock;
+        int currPanel = 0;
 
         public AddPanel(List<Stock> stockList)
         {
@@ -54,7 +55,35 @@ namespace Assign2
 
         private void CreateBtn_Click(object sender, EventArgs e)
         {
+            
+            // creates the panel in order from 0 - 5, once there are 6 panels created it will
+            // start over with the first pannel 
+            if(currPanel == 6)
+            {
+                currPanel = 0;
+            }
+            else
+            {
+                currPanel += 1;
+            }
+
             // create new instance of panel, decorator
+            if(PortfolioRadio.Checked)
+            {
+
+            } 
+            else if(StockPriceRadio.Checked)
+            {
+
+            }
+            else if(IndStockVolRadio.Checked)
+            {
+
+            }
+
+
+
+
 
             this.Close();
         }
@@ -63,7 +92,5 @@ namespace Assign2
         {
             this.Close();
         }
-
-        
     }
 }
