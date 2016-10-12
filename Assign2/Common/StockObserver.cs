@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Common;
 
-namespace Assign2
+namespace Common
 {
-    class StockObserver 
+    interface StockObserver
     {
+        void Update(Subject stock);
     }
 }

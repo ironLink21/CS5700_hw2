@@ -59,7 +59,7 @@ namespace Assign2
                 {
                     if (symbol.Equals(stock.symbol))
                     {
-                        mainbox.portfolio.Add(stock);
+                        mainbox.portfolio.Add(stock.symbol, stock);
 
                         // creating the csv files
                         var newLine = string.Format("{0},{1}", stock.symbol, stock.name);
@@ -67,6 +67,7 @@ namespace Assign2
                     }
                 }
             }
+
             //TODO: write to a file in csv
             SaveFileDialog fout = new SaveFileDialog();
             if (fout.ShowDialog() == DialogResult.OK)

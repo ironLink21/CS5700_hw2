@@ -14,13 +14,13 @@ namespace Assign2
     public partial class AddPanel : Form
     {
         string currStock;
-        int currPanel = 0;
+        int currPanel = 0;  
 
-        public AddPanel(List<Stock> stockList)
+        public AddPanel(Dictionary<String, Stock> stockList)
         {
             InitializeComponent();
 
-            foreach(Stock stock in stockList)
+            foreach(Stock stock in stockList.Values)
             {
                 CurrStocksCombo.Items.Add(stock.symbol);
             }
@@ -55,20 +55,29 @@ namespace Assign2
 
         private void CreateBtn_Click(object sender, EventArgs e)
         {
+
+            // grab the stock's symbol(s) & grab from the portfolio list
+
+            // create panel based upon the type of panel
+            // choose type of decorator (open, closed)
+            
+            // stock.Subscribe(observer(panel))
             
             // creates the panel in order from 0 - 5, once there are 6 panels created it will
             // start over with the first pannel 
-            if(currPanel == 6)
+            /*if(currPanel == 6)
             {
                 currPanel = 0;
+                
             }
             else
             {
                 currPanel += 1;
-            }
+
+            }*/
 
             // create new instance of panel, decorator
-            if(PortfolioRadio.Checked)
+            /*if(PortfolioRadio.Checked)
             {
 
             } 
@@ -79,7 +88,9 @@ namespace Assign2
             else if(IndStockVolRadio.Checked)
             {
 
-            }
+            }*/
+
+
 
 
 

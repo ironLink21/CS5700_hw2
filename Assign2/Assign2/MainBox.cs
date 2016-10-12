@@ -9,21 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Common;
+using System.Net;
 
 namespace Assign2
 {
     public partial class MainBox : Form
     {
         public List<Stock> stockList { get; set; }
-        public List<Stock> portfolio { get; set; }
+        public StockPortfolio portfolio { get; set; }
         public CreatePortfolioView loadBox { get; set; }
         public AddPanel addPanel { get; set; }
+        public IPAddress ip_address { get; set; }
+        public int ip_port { get; set; }
+        private Communicator communicator { get; set; }
 
         public MainBox()
         {
             InitializeComponent();
         }
 
+        private void RefreshObserversListView()
+        {
+
+        }
+
+        // button controls
         private void LoadBtn_Click(object sender, EventArgs e)
         {
             // open openfiledialog
@@ -31,7 +41,7 @@ namespace Assign2
             if (fopen.ShowDialog() == DialogResult.OK)
             {
                 stockList = new List<Stock>();
-                portfolio = new List<Stock>();
+                portfolio = new StockPortfolio();
 
                 CSVfileHandler reader = new CSVfileHandler();
                 stockList = reader.inputStream(fopen.FileName);
@@ -51,6 +61,25 @@ namespace Assign2
         {
         }
 
-        
+        private void IPaddrBox_TextChanged(object sender, EventArgs e)
+        {
+            this.ip_address = IPAddress.Parse(IPaddrBox.Text);
+        }
+
+        private void PortBox_TextChanged(object sender, EventArgs e)
+        {
+            this.ip_port = int.Parse(PortBox.Text);
+        }
+
+        private void ctnButton_Click(object sender, EventArgs e)
+        {
+            communicator = new Communicator() { Portfolio = portfolio, RemoteEndPoint = new IPEndPoint(ip_address, ip_port) };
+            communicator.Start();
+        }
+
+        private void disConnectBtn_Click(object sender, EventArgs e)
+        {
+            communicator.Stop();
+        }
     }
 }
