@@ -36,6 +36,8 @@
             this.PanelTypesLabel = new System.Windows.Forms.Label();
             this.CreateBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
+            this.HighPriceRadio = new System.Windows.Forms.RadioButton();
+            this.LowPriceRadio = new System.Windows.Forms.RadioButton();
             this.PanelTypePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,11 +128,37 @@
             this.CancelBtn.UseVisualStyleBackColor = true;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
+            // HighPriceRadio
+            // 
+            this.HighPriceRadio.AutoSize = true;
+            this.HighPriceRadio.Location = new System.Drawing.Point(166, 39);
+            this.HighPriceRadio.Name = "HighPriceRadio";
+            this.HighPriceRadio.Size = new System.Drawing.Size(74, 17);
+            this.HighPriceRadio.TabIndex = 4;
+            this.HighPriceRadio.TabStop = true;
+            this.HighPriceRadio.Text = "High Price";
+            this.HighPriceRadio.UseVisualStyleBackColor = true;
+            this.HighPriceRadio.CheckedChanged += new System.EventHandler(this.HighPriceRadio_CheckedChanged);
+            // 
+            // LowPriceRadio
+            // 
+            this.LowPriceRadio.AutoSize = true;
+            this.LowPriceRadio.Location = new System.Drawing.Point(166, 62);
+            this.LowPriceRadio.Name = "LowPriceRadio";
+            this.LowPriceRadio.Size = new System.Drawing.Size(72, 17);
+            this.LowPriceRadio.TabIndex = 5;
+            this.LowPriceRadio.TabStop = true;
+            this.LowPriceRadio.Text = "Low Price";
+            this.LowPriceRadio.UseVisualStyleBackColor = true;
+            this.LowPriceRadio.CheckedChanged += new System.EventHandler(this.LowPriceRadio_CheckedChanged);
+            // 
             // AddPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 115);
+            this.Controls.Add(this.LowPriceRadio);
+            this.Controls.Add(this.HighPriceRadio);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.CreateBtn);
             this.Controls.Add(this.PanelTypePanel);
@@ -140,6 +168,7 @@
             this.PanelTypePanel.ResumeLayout(false);
             this.PanelTypePanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -153,5 +182,7 @@
         private System.Windows.Forms.RadioButton PortfolioRadio;
         private System.Windows.Forms.Button CreateBtn;
         private System.Windows.Forms.Button CancelBtn;
+        private System.Windows.Forms.RadioButton HighPriceRadio;
+        private System.Windows.Forms.RadioButton LowPriceRadio;
     }
 }

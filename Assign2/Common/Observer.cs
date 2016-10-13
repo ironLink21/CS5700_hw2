@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    interface StockObserver
+    public abstract class Observer
     {
-        void Update(Subject stock);
+        public abstract void Update(Context context);
     }
 }

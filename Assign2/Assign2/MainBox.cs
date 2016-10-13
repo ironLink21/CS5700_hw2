@@ -63,12 +63,25 @@ namespace Assign2
 
         private void IPaddrBox_TextChanged(object sender, EventArgs e)
         {
-            this.ip_address = IPAddress.Parse(IPaddrBox.Text);
+            try
+            {
+                this.ip_address = IPAddress.Parse(IPaddrBox.Text);
+            } catch(Exception ex)
+            {
+                Console.WriteLine("{0} exception caught.", ex);
+            }
         }
 
         private void PortBox_TextChanged(object sender, EventArgs e)
         {
-            this.ip_port = int.Parse(PortBox.Text);
+            try
+            {
+                this.ip_port = int.Parse(PortBox.Text);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("{0} exception caught.", ex);
+            }
         }
 
         private void ctnButton_Click(object sender, EventArgs e)

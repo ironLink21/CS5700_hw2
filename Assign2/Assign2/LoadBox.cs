@@ -59,11 +59,18 @@ namespace Assign2
                 {
                     if (symbol.Equals(stock.symbol))
                     {
-                        mainbox.portfolio.Add(stock.symbol, stock);
+                        try
+                        {
+                            mainbox.portfolio.Add(stock.symbol, stock);
 
-                        // creating the csv files
-                        var newLine = string.Format("{0},{1}", stock.symbol, stock.name);
-                        csv.AppendLine(newLine);
+                            // creating the csv files
+                            var newLine = string.Format("{0},{1}", stock.symbol, stock.name);
+                            csv.AppendLine(newLine);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("{0} exception caught.", ex);
+                        }
                     }
                 }
             }

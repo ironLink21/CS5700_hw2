@@ -42,8 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context.cs" />
     <Compile Include="CSVfileHandler.cs" />
-    <Compile Include="StockObserver.cs" />
+    <Compile Include="Observer.cs" />
+    <Compile Include="Portfolio.cs" />
+    <Compile Include="PortfolioObserver.cs" />
+    <Compile Include="StockPriceObserver.cs" />
+    <Compile Include="StockVolumeObserver.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="TickerMessage.cs" />
     <Compile Include="StreamStocksMessage.cs" />

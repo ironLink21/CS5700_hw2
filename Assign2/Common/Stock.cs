@@ -30,19 +30,13 @@ namespace Common
             name = name1;
         }
 
-        //public Stock(string symbol1, string name1, string openingP1, string closingP1, string currP1, string bidP1, string askP1, string volSold1, string avg101)
-        //{
-        //    symbol = symbol1;
-        //    name = name1;
-        //
-        //    openingP = openingP1;
-        //    closingP = closingP1;
-        //    currP = currP1;
-        //    bidP = bidP1;
-        //    askP = askP1;
-        //    volSold = volSold1;
-        //    avg10 = avg101;
-        //}
+        public override void Notify()
+        {
+            foreach(Observer observer in _subscribers)
+            {
+                observer.Update(new ContextStock(this));
+            }
+        }
 
         public void Update(TickerMessage message)
         {
