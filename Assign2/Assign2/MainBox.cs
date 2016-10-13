@@ -66,7 +66,8 @@ namespace Assign2
             try
             {
                 this.ip_address = IPAddress.Parse(IPaddrBox.Text);
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine("{0} exception caught.", ex);
             }
